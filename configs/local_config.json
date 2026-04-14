@@ -1,0 +1,38 @@
+{
+  "paths": {
+    "processed_people_on_builds": "../data/processed/people_on_builds",
+    "filtered_pre_model": "../data/processed/filtered_pre_model",
+    "region_dicts": "../data/processed/per_region_dist/region_dicts",
+    "model_output_root": "../data/processed/model_output",
+    "real_cases_csv": "../data/reference/daily_cases_read_cam_cov.csv",
+    "mobility_csv": "../data/reference/mobility_city_alpha_delta.csv",
+    "results_root": "../results"
+  },
+  "defaults": {
+    "cities": [
+      "Reading",
+      "Cambridge",
+      "Coventry"
+    ],
+    "months": [
+      "09"
+    ]
+  },
+  "gurobi": {
+    "time_limit_sec": 20,
+    "stall_time_sec": 5,
+    "stall_rel_improvement": 0.005,
+    "stall_abs_improvement": 1.0,
+    "no_incumbent_time_sec": 8,
+    "mip_gap": 0.03,
+    "mip_gap_abs": 1.0,
+    "threads": 0,
+    "output_flag": 1,
+    "mip_focus": 1,
+    "heuristics": 0.2,
+    "seed": 42,
+    "license": {
+      "options_file": "../data/gurobi_wls.txt"
+    }
+  }
+}
